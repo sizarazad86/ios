@@ -41,4 +41,10 @@ var app = new Framework7({
 	vi: {
 		placementId: 'pltd4o7ibb9rc653x14',
 	},
+	dialog: {
+		// set default title for all dialog shortcuts
+		title: 'My App',
+		// change default "OK" button text
+		buttonOk: 'Done'
+	},
 });
