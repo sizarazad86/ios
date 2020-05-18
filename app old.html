@@ -78,13 +78,13 @@
 						<div class="block-title block-title-medium">Block title</div>
 						<div data-slides-per-view="auto" class="swiper-container swiper-init">
 							<div class="swiper-wrapper">
-								<a class="swiper-slide app-icon first-app link open-confirm">
+								<a class="swiper-slide app-icon first-app link install-addme">
 									<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/57/83/e1/5783e156-c657-f7f1-396f-105683b26644/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
 									<p class="app-name" id="app-name">AddMe</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link open-alert">
-									<img class="app-icon" src="img/f7-icon-square.png">
-									<p class="app-name">AppName</p>
+								<a class="swiper-slide app-icon app-icon-margin link install-8ballpool">
+									<img class="app-icon" src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c8/03/13/c80313ff-66bb-ade0-972d-a1b9522a525a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/246x0w.png">
+									<p class="app-name">8 Ball Pool</p>
 								</a>
 								<a onclick="loadXMLDoc()" class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
@@ -555,6 +555,7 @@
 	<script type="text/javascript" src="js/routes.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+	<script type="text/javascript" src="js/install.js"></script>
 	<script>
 		var name = document.getElementById("name");
 		var theme = 'ios';
@@ -570,33 +571,9 @@
 		else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
 	</script>
 	<script>
-		var app = new Framework7({
-						dialog: {
-							title: 'Information',
-							buttonOk: 'Install',
-						},
-		});
-		var $$ = Dom7;
-		
-		var appName = document.getElementById("app-name");
-		
-		// Alert
-		$$('.open-alert').on('click', function() {
-			app.dialog.alert('Hello');
-		});
-
-		// Confirm
-		$$('.open-confirm').on('click', function(appName, bundle, version, size) {
-			app.dialog.confirm('App Name: ' + appName + '<br>Bundle Identifier: ' + bundle + '<br>Version: ' + version + '<br>Size: ' + size, 'Information', function() {
-				app.dialog.preloader('Installing...', 'white');
-				window.location = "itms-services://?action=download-manifest&url=https://ios.sizu.gq/plists/addme.plist";
-				setTimeout(function() {
-					app.dialog.close();
-				}, 1500);
-			});
-		});
+		var app = new Framework7({});
 	</script>
-	<script>
+	<!-- <script>
 		function loadversion() {
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
@@ -618,7 +595,7 @@
 			}
 			document.getElementById("demo").innerHTML = txt;
 		}
-	</script>
+	</script> -->
 
 </body>
 
