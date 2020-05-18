@@ -11,6 +11,11 @@ var routes = [
 		url: './pages/about.html',
 		name: 'about',
   },
+	{
+		path: '/app/',
+		url: './app%20old.html',
+		name: 'app',
+  },
   // Right Panel pages
 	{
 		path: '/panel-right-1/',
