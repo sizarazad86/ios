@@ -29,7 +29,7 @@
 				<key>metadata</key>
 				<dict>
 					<key>bundle-identifier</key>
-					<string class="bundle">com.PrestigeNetEnterprises.AddMe</string>
+					<string class="bundle">gq.sizu.AddMe</string>
 					<key>bundle-version</key>
 					<string class="version">1.4</string>
 					<key>kind</key>

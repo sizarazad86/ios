@@ -29,7 +29,7 @@
 				<key>metadata</key>
 				<dict>
 					<key>bundle-identifier</key>
-					<string class="bundle">com.miniclip.8ballpoolmult</string>
+					<string class="bundle">gq.sizu.8ballpool</string>
 					<key>bundle-version</key>
 					<string class="version">4.8.4</string>
 					<key>kind</key>
