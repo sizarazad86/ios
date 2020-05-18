@@ -964,20 +964,6 @@
 			<key>URL</key>
 			<string>https://ios.sizu.gq</string>
 		</dict>
-		<dict>
-			<key>PayloadDescription</key>
-			<string>Configures notifications settings for apps</string>
-			<key>PayloadDisplayName</key>
-			<string>Notifications</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.notificationsettings.5901AB47-F85D-4C7B-8A7D-5001A269B8A1</string>
-			<key>PayloadType</key>
-			<string>com.apple.notificationsettings</string>
-			<key>PayloadUUID</key>
-			<string>5901AB47-F85D-4C7B-8A7D-5001A269B8A1</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
 	<string>Operation Karez</string>
@@ -990,7 +976,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>CD3DA738-FD88-4695-8603-962923DE421B</string>
+	<string>D73DE8D1-9690-48A6-833F-405DB716C007</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
