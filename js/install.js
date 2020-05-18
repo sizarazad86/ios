@@ -21,3 +21,13 @@ $$('.install-8ballpool').on('click', function (appName, bundle, version, size) {
 		}, 1500);
 	});
 });
+
+$$('.install-pubgm').on('click', function (appName, bundle, version, size) {
+	app.dialog.confirm('App Name: ' + 'PUBG Mobile Hack' + '<br>Bundle Identifier: ' + 'com.tencent.ig' + '<br>Version: ' + '0.18.0' + '<br>Size: ' + '2GB', 'Information', function () {
+		app.dialog.preloader('Installing...', 'white');
+		window.location = "itms-services://?action=download-manifest&url=https://ios.sizu.gq/plists/pubgm.plist";
+		setTimeout(function () {
+			app.dialog.close();
+		}, 1500);
+	});
+});
