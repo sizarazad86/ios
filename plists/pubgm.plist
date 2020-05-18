@@ -29,7 +29,7 @@
 				<key>metadata</key>
 				<dict>
 					<key>bundle-identifier</key>
-					<string class="bundle">com.tencent.ig</string>
+					<string class="bundle">gq.sizu.pubgm</string>
 					<key>bundle-version</key>
 					<string class="version">0.18.0</string>
 					<key>kind</key>
