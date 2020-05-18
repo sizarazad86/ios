@@ -952,17 +952,17 @@
 			<key>PayloadDisplayName</key>
 			<string>Web Clip</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.webClip.managed.BFC701C4-5EA1-42FC-882A-1295A1C4EF66</string>
+			<string>com.apple.webClip.managed.F69F32DB-5AF4-487D-B81A-0714C8561350</string>
 			<key>PayloadType</key>
 			<string>com.apple.webClip.managed</string>
 			<key>PayloadUUID</key>
-			<string>BFC701C4-5EA1-42FC-882A-1295A1C4EF66</string>
+			<string>F69F32DB-5AF4-487D-B81A-0714C8561350</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>Precomposed</key>
 			<false/>
 			<key>URL</key>
-			<string>https://ios.sizu.gq/app/</string>
+			<string>https://ios.sizu.gq/app%20old.html</string>
 		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
@@ -976,7 +976,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>F3C3206E-5328-40AA-AE02-D05B01772038</string>
+	<string>9A2799AC-C09D-4CD7-8AB8-25880675B84F</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
