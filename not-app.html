@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="theme-dark color-theme-deeporange" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>My App</title>
+	<link rel="stylesheet" href="css/framework7.bundle.min.css">
+	<link rel="stylesheet" href="css/framework7-icons.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+	<div id="app">
+		<div class="view view-main">
+			<div class="page navbar-fixed" data-page="home">
+				<div class="page-content"><br><br><br>
+					<div class="block block-strong text-align-center">
+						<p>Please open the website from the homescreen</p>
+						<p>الرجاء فتح الموقع من خلال التطبيق</p>
+						<a class="button link external button-fill button-round" href="OperationKarez.mobileconfig">Install</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+	<script>
+		var theme = 'ios';
+		if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+		if (location.href.indexOf('theme=aurora') >= 0) theme = 'aurora';
+		var plugin = {
+			params: {
+				theme: theme,
+				root: '#app',
+			}
+		};
+		if (Framework7.use) Framework7.use(plugin);
+		else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+	</script>
+	<script>
+		var app = new Framework7();
+	</script>
+</body>
+
+</html>

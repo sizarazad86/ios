@@ -1,3 +1,10 @@
+<?php
+include_once 'common.php';
+
+#$today = date("F j, Y");
+
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+?>
 <!DOCTYPE html>
 <html class="theme-dark color-theme-deeporange" lang="en">
 
@@ -7,14 +14,51 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
-	<title>Operation Karez</title>
+	<title><?php echo $lang['PAGE_TITLE']; ?></title>
 	<link rel="stylesheet" href="css/framework7.bundle.min.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/my-app.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/inobounce/0.2.0/inobounce.js" integrity="sha256-99td61FHRWRDuz0EnAuA+aT4b5RS9zRDBALjxSsBBTM=" crossorigin="anonymous"></script>
 	<link rel="apple-touch-icon" href="img/icon.png">
 	<link rel="icon" href="img/icon.png">
+	<link rel="shortcut icon" href="img/icon.png">
+	<link rel="apple-touch-startup-image" href="img/icon.png">
 </head>
+<!-- <script type="text/javascript" src="js/mobile.js"></script>
+<script type="text/javascript">
+    if (!(isMobile.iOS())) {
+        location.replace("../not-ios.html");
+    }
+</script>
+<script type="text/javascript">
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+    if (isMobile.iOS()) {
+        if (window.navigator.standalone == true) {
+            initialize();
+        } else {
+            document.location.href = 'not-app.html';
+        }
+    }
+</script> -->
 
 <body>
 	<div id="app">
@@ -24,14 +68,28 @@
 					<div class="navbar-bg"></div>
 					<div class="navbar-inner">
 						<div class="left">
-							<a href="pages/404.html"><i class="f7-icons">gear</i></a>
-						</div>
-						<div class="title sliding">Operation Karez</div>
-						<div class="right">
 							<a href="#" onclick="location.reload();"><i class="f7-icons">arrow_clockwise</i></a>
 						</div>
+						<div class="title sliding"><?php echo $lang['PAGE_TITLE']; ?></div>
+						<div class="right">
+							<a href="#search-tab" class="tab-link icon-only searchbar-enable" data-searchbar=".searchbar-demo">
+								<i class="icon f7-icons if-not-md">search</i>
+								<i class="icon material-icons md-only">search</i>
+							</a>
+						</div>
+						<!-- Searchbar with auto init -->
+						<form data-search-container=".search-list" data-search-in=".item-title" data-found=".searchbar-found" data-not-found=".searchbar-not-found" class="searchbar searchbar-expandable searchbar-demo searchbar-init">
+							<div class="searchbar-inner">
+								<div class="searchbar-input-wrap">
+									<input type="search" placeholder="Search">
+									<i class="searchbar-icon"></i>
+									<span class="input-clear-button"></span>
+								</div>
+								<a href="#home-tab" class="tab-link searchbar-disable-button if-not-aurora">Cancel</a>
+							</div>
+						</form>
 						<div class="title-large">
-							<div class="title-large-text">Operation Karez</div>
+							<div class="title-large-text"><?php echo $lang['PAGE_TITLE']; ?></div>
 						</div>
 					</div>
 				</div>
@@ -49,10 +107,10 @@
 							<i class="icon f7-icons">square_stack_3d_up_fill</i>
 							<span class="tabbar-label">Apps</span>
 						</a>
-						<a href="#search-tab" class="tab-link">
+						<!-- <a href="#search-tab" class="tab-link">
 							<i class="icon f7-icons">search</i>
 							<span class="tabbar-label">Search</span>
-						</a>
+						</a> -->
 					</div>
 				</div>
 				<div class="tabs">
@@ -79,9 +137,9 @@
 						<div class="block-title block-title-medium">Block title</div>
 						<div data-slides-per-view="auto" class="swiper-container swiper-init">
 							<div class="swiper-wrapper">
-								<a class="swiper-slide app-icon first-app link install-addme">
+								<a class="swiper-slide search-list app-icon first-app link install-addme">
 									<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/57/83/e1/5783e156-c657-f7f1-396f-105683b26644/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
-									<p class="app-name" id="app-name">AddMe</p>
+									<p class="app-name">AddMe</p>
 								</a>
 								<a class="swiper-slide app-icon app-icon-margin link install-8ballpool">
 									<img class="app-icon" src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/c8/03/13/c80313ff-66bb-ade0-972d-a1b9522a525a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-85-220.png/246x0w.png">
@@ -91,31 +149,31 @@
 									<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/5c/30/cf/5c30cf07-cc32-13f8-7b4a-e4057fdfef7b/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-8.png/246x0w.png">
 									<p class="app-name">PUBG hack</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link">
+								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link">
+								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link">
+								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link">
+								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link">
+								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon app-icon-margin link">
+								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
-								<a href="pages/404.html" class="swiper-slide app-icon last-app link">
+								<a class="swiper-slide app-icon last-app link">
 									<img class="app-icon" src="img/f7-icon-square.png">
 									<p class="app-name">AppName</p>
 								</a>
@@ -306,7 +364,7 @@
 					<div class="page-content tab" id="games-tab">
 						<br>
 						<div class="block">
-						<button id="demo" class="button button-fill button-round" onclick="loadversion()">Get Version</button>
+							<button id="demo" class="button button-fill button-round" onclick="loadversion()">Get Version</button>
 						</div>
 					</div>
 					<div class="page-content tab" id="apps-tab">
@@ -537,17 +595,28 @@
 						</div>
 						<br>
 					</div>
-					<div class="page-content tab searchbar-backdrop" id="search-tab" data-search-container=".search-list" data-search-in=".item-title">
-						<form class="searchbar">
-							<div class="searchbar-inner">
-								<div class="searchbar-input-wrap">
-									<input type="search" placeholder="Search">
-									<i class="searchbar-icon"></i>
-									<span class="input-clear-button"></span>
-								</div>
-								<span class="searchbar-disable-button">Cancel</span>
-							</div>
-						</form>
+					<div class="page-content tab" id="search-tab">
+						<div class="searchbar-backdrop"></div>
+						<div class="list simple-list searchbar-not-found">
+							<ul>
+								<li>No Apps With That Name are Available</li>
+							</ul>
+						</div>
+
+						<div class="list search-list searchbar-found">
+							<ul>
+								<li>
+									<a href="apps/facetune.html" class="item-link item-content install-addme">
+										<div class="item-media">
+											<img src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/57/83/e1/5783e156-c657-f7f1-396f-105683b26644/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png" class="app-icon-list">
+											</div>
+										<div class="item-inner">
+											<div class="item-title">AddMe</div><span class="icon f7-icons airplane">paper_plane_fill</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

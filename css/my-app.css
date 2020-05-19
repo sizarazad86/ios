@@ -1,41 +1,53 @@
 .swiper-container {
-    background-color: #222;
-    padding-top: 10px;
-    border-bottom: 1px solid #222;
+	background-color: #222;
+	padding-top: 10px;
+	border-bottom: 1px solid #222;
 }
 
 .swiper-wrapper {
-    padding-bottom: 30px;
+	padding-bottom: 30px;
 }
 
 .app-icon {
-    background-color: #aaa;
-    width: 90px;
-    height: 90px;
-    border-radius: 25%;
+	background-color: #aaa;
+	width: 90px;
+	height: 90px;
+	border-radius: 25%;
 }
 
 .app-icon-margin {
-    margin-left: 15px;
+	margin-left: 15px;
 }
 
 .app-name {
-    color: #fff;
-    margin: 95px auto auto -85px;
+	color: #fff;
+	margin: 95px auto auto -85px;
 }
 
 .first-app {
-    margin-left: 15px;
+	margin-left: 15px;
 }
 
 .last-app {
-    margin-left: 15px;
-    margin-right: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .icon-app {
 	width: 80px;
 	height: 80px;
+	border-radius: 25%;
+}
+
+.app-name-list {
+	font-size: 11px;
+	text-align: left;
+	margin: 3px
+}
+
+.app-icon-list {
+	width: 70px;
+	height: 70px;
 	border-radius: 25%;
 }
 
