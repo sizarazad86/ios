@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="img/icon.png">
 	<link rel="apple-touch-startup-image" href="img/icon.png">
 </head>
+<!--
 <script type="text/javascript" src="js/mobile.js"></script>
 <script type="text/javascript">
 	if (!(isMobile.iOS())) {
@@ -52,7 +53,7 @@
 		}
 	}
 </script>
-
+-->
 <body>
 	<div id="app">
 		<div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
@@ -61,7 +62,7 @@
 					<div class="navbar-bg"></div>
 					<div class="navbar-inner">
 						<div class="left">
-							<a href="#" onclick="location.reload();"><i class="f7-icons">arrow_clockwise</i></a>
+							<a href="#" onclick="location.reload();"><i class="f7-icons">gear</i></a>
 						</div>
 						<div class="title sliding">Operation Karez</div>
 						<div class="right">
@@ -105,30 +106,49 @@
 				</div>
 				<div class="tabs">
 					<div class="page-content tab tab-active" id="home-tab">
-						<div class="card card-expandable">
+						<div class="card card-expandable" style="height: 120px;">
 							<div class="card-content">
-								<div class="bg-color-deeporange" style="height: 300px">
+								<div class="bg-color-deeporange" style="height: 120px;">
 									<div class="card-header text-color-white display-block">
-										<img style="margin-top: 5px;" class="app-icon" src="img/icon.png">
-										<h5 style="margin: -105px auto auto 110px;">App Name</h5>
-										<h6 style="opacity: 0.7; margin: auto auto auto 110px;">App Desc.</h6>
+										<img style="margin-top: 5px;" class="app-icon" src="https://www.4macsolutions.com/files/2017/06/tip-search-settings-app.png">
+										<h5 style="margin: -85px auto auto 100px;">To Install Apps</h5>
+										<h6 style="opacity: 0.7; margin: auto auto auto 100px;">Read Important ‼️.</h6>
 									</div>
 									<a href="#" class="link card-close card-opened-fade-in color-white" style="position: absolute; right: 15px; top: 15px">
 										<i class="icon f7-icons">multiply_circle_fill</i>
 									</a>
-									<button style="width: 60px; height: 30px; margin-left: 125px;" class="open-alert button button-fill button-round color-blue"><b>GET</b></button>
 								</div>
 								<div class="card-content-padding">
-									<p>Framework7 - is a free and open source HTML mobile framework to develop hybrid mobile apps or web apps with iOS or Android (Material) native look and feel. It is also an indispensable prototyping apps tool to show working app prototype as soon as possible in case you need to.</p>
-									...
+									<ol>
+										<li>
+											<b>First</b>
+											<ul>
+												<li>Go to Settings App.</li>
+												<li>Go to Wi-Fi Section.</li>
+												<li>Go to Wifi Connection Settings.</li>
+												<li>Go to <p class="chip">Configure proxy</p>.</li>
+												<li>Select <p class="chip">Automatic</p>.</li>
+												<li>Add <p class="chip color-orange">http://ffapple.com</p> To <p class="chip">URL</p>.</li>
+											</ul>
+										</li>
+										<br>
+										<li>
+											<b>Second</b>
+											<ul>
+												<li>Go to Settings App.</li>
+												<li>Go to Safari Settings.</li>
+												<li>Clear History and Website Data.</li>
+											</ul>
+										</li>
+									</ol>
 								</div>
 							</div>
 						</div>
 						<div class="block-title block-title-medium">Block title</div>
 						<div data-slides-per-view="auto" class="swiper-container swiper-init">
 							<div class="swiper-wrapper">
-								<a class="swiper-slide search-list app-icon first-app link install-addme">
-									<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/57/83/e1/5783e156-c657-f7f1-396f-105683b26644/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
+								<a class="swiper-slide app-icon first-app link install-addme">
+									<img class="elevation-6 elevation-hover-24 elevation-pressed-12 elevation-transition app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/57/83/e1/5783e156-c657-f7f1-396f-105683b26644/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
 									<p class="app-name">AddMe</p>
 								</a>
 								<a class="swiper-slide app-icon app-icon-margin link install-8ballpool">
@@ -139,9 +159,9 @@
 									<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple123/v4/5c/30/cf/5c30cf07-cc32-13f8-7b4a-e4057fdfef7b/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-8.png/246x0w.png">
 									<p class="app-name">PUBG hack</p>
 								</a>
-								<a class="swiper-slide app-icon app-icon-margin link">
-									<img class="app-icon" src="img/f7-icon-square.png">
-									<p class="app-name">AppName</p>
+								<a class="swiper-slide app-icon app-icon-margin link install-minecraft">
+									<img class="app-icon" src="https://is5-ssl.mzstatic.com/image/thumb/Purple113/v4/2b/93/53/2b935390-fd7a-2301-5dd2-8e84599c19bc/AppIcon-0-1x_U007emarketing-0-85-220-9.png/246x0w.png">
+									<p class="app-name">Minecraft</p>
 								</a>
 								<a class="swiper-slide app-icon app-icon-margin link">
 									<img class="app-icon" src="img/f7-icon-square.png">
@@ -652,9 +672,8 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/routes.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/install.js"></script>
 	<script>
 		var name = document.getElementById("name");
