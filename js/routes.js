@@ -5,6 +5,16 @@ var routes = [
 		url: './index.html',
 		name: 'home',
   },
+	{
+		path: './not-app/',
+		url: './not-app.html',
+		name: 'not-app',
+  },
+	{
+		path: './not-ios/',
+		url: './not-ios.html',
+		name: 'not-ios',
+  },
   // About page
 	{
 		path: '/about/',
