@@ -1,3 +1,5 @@
+/*
+
 var routes = [
   // Index page
   {
@@ -18,3 +20,5 @@ var routes = [
     componentUrl: './about.html',
   },
 ];
+
+*/
