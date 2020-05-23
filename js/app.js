@@ -48,3 +48,15 @@ var app = new Framework7({
 		buttonOk: 'Done'
 	},
 });
+
+window.onload = function () {
+	WebPullToRefresh.init({
+		loadingFunction: exampleLoadingFunction
+	});
+};
+
+// Just an example loading function that returns a
+// promise that WebPullToRefresh can use.
+var exampleLoadingFunction = function () {
+	location.reload();
+};
